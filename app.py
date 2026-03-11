@@ -1,6 +1,6 @@
 """
 ╔══════════════════════════════════════════════════════════════╗
-║        🎬  CineMatch — Netflix-Style Movie Recommender       ║
+║          CineMatch — Netflix-Style Movie Recommender       ║
 ║   Single-file Streamlit app  |  streamlit run app.py         ║
 ╚══════════════════════════════════════════════════════════════╝
 
@@ -23,8 +23,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 # PAGE CONFIG  — must be FIRST Streamlit call
 # ══════════════════════════════════════════════════════════════════════════════
 st.set_page_config(
-    page_title="🎬 CineMatch",
-    page_icon="🎬",
+    page_title=" CineMatch",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -329,7 +329,7 @@ def render_grid(movies: pd.DataFrame) -> None:
 def main():
 
     # ── Load data ─────────────────────────────────────────────────────────────
-    with st.spinner("🎬 Loading movie database…"):
+    with st.spinner(" Loading movie database…"):
         df = load_data(DATASET)
 
     with st.spinner("🤖 Building recommendation engine…"):
@@ -350,7 +350,7 @@ def main():
 
     st.markdown(f"""
     <div class="hero">
-        <div class="logo">🎬 CineMatch</div>
+        <div class="logo"> CineMatch</div>
         <div class="tagline">AI-powered movie recommendations — {len(df):,} films</div>
         <div class="stats">
             <div class="stat"><div class="stat-n">{len(df):,}</div><div class="stat-l">MOVIES</div></div>
@@ -403,7 +403,7 @@ def main():
                 <p>⭐ {fmt_rating(s.get('Rating'))} &nbsp;|&nbsp;
                    🎭 {s.get('Genre','—') or '—'} &nbsp;|&nbsp;
                    📅 {fmt_year(s.get('Year',''))}
-                   {'&nbsp;|&nbsp; 🎬 ' + str(s.get('Director','')) if s.get('Director') else ''}
+                   {'&nbsp;|&nbsp;  ' + str(s.get('Director','')) if s.get('Director') else ''}
                 </p>
             </div>
             """, unsafe_allow_html=True)
@@ -448,7 +448,7 @@ def main():
     st.markdown("<hr>", unsafe_allow_html=True)
     st.markdown(
         "<p style='text-align:center;color:#3a3a3a;font-size:.74rem;'>"
-        "🎬 CineMatch &nbsp;•&nbsp; TF-IDF + Cosine Similarity"
+        " CineMatch &nbsp;•&nbsp; TF-IDF + Cosine Similarity"
         " &nbsp;•&nbsp; Built with Streamlit</p>",
         unsafe_allow_html=True,
     )
