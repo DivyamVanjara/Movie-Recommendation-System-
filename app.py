@@ -157,7 +157,7 @@ hr          { border-color:#222 !important; margin:24px 0 !important; }
 # ══════════════════════════════════════════════════════════════════════════════
 # CONSTANTS
 # ══════════════════════════════════════════════════════════════════════════════
-DATASET    = "dataset.csv"
+DATASET    = "imdb-movies-dataset.csv"
 NO_POSTER  = "https://placehold.co/300x444/1c1c1c/555555?text=No+Poster"
 
 
